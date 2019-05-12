@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--ALL You need-->
+    <link rel="stylesheet" type="text/css" href="src/css/loading-bar.css"/>
+    <script type="text/javascript" src="src/js/loading-bar.js"></script>
+    <!--ALL You need-->
+    <title>Hello, world!</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <img style="max-width: 400px; min-width: 300px" class="wallet-png img-fluid" src="src/img/wallet.svg"
+                 alt="">
+            <div
+                    class="ldBar"
+                    data-pattern-size="10"
+                    data-stroke="black"
+                    class="ldBar label-center"
+                    align="center"
+                    style="width:50% !important;height:50% !important;margin:auto; height: 40px !important; min-width: 300px !important"
+                    id="myItem1"
+            ></div>
+            <style>
+                .ldBar-label {
+                    font-weight: bold;
+                }
+
+                .wallet-png {
+                    margin-top: 9em;
+                }
+
+                @media screen and (max-width: 430px) {
+                    .wallet-png {
+                        width: 300px;
+                    }
+                }
+            </style>
+            <script>
+                var bar1 = new ldBar("#myItem1");
+
+                // for examople -- remove before using
+                var counter = 0;
+                setInterval(function () {
+                    if (counter === 100) {
+                        counter = 0
+                    }
+                    counter += 25;
+                    bar1.set(counter);
+                }, 2000);
+                //
+            </script>
+        </div>
+    </div>
+</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
